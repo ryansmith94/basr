@@ -1,2 +1,3 @@
-npx --no-install jest --onlyChanged
+npx --no-install prettier . --write
 npx --no-install lint-staged
+npx --no-install jest --onlyChanged

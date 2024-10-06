@@ -1,13 +1,20 @@
 import { BaseError } from 'make-error'
 
 export class InvalidDigitError extends BaseError {
-	constructor(public digit: string, public base: number) {
+	constructor(
+		public digit: string,
+		public base: number
+	) {
 		super(`Invalid digit '${digit}' for base ${base}.`)
 	}
 }
 
 export class InvalidBaseError extends BaseError {
-	constructor(public ref: string, public base: number, public maxBase: number) {
+	constructor(
+		public ref: string,
+		public base: number,
+		public maxBase: number
+	) {
 		super(`'${ref}' must be between 2 and ${maxBase} not '${base}'.`)
 	}
 }
