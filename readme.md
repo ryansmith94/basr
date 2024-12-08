@@ -12,12 +12,18 @@
 
 ```ts
 // Install it with `npm i baseroo`
-import { convertBase } from 'baseroo'
+import { convertBase, customAlphabet } from 'baseroo'
 
 const base16Value = '8f.3333333333'
 
 // Works for floating point numbers to a precision of 10 places.
 const base10Value = convertBase(base16Value, 16, 10) // '143.1999999999'
+
+// Supports base conversion using custom alphabet
+const convertBaseWithUserAlphabet = customAlphabet(
+	'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/'
+)
+const base32Value = convertBase(base16Value, 16, 32) // '4f.6cpj6cpj'
 ```
 
 ### Background
